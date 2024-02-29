@@ -6,4 +6,5 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(Leetcode main.cpp
         Easy/q9.h
         Easy/q13.h
+        Easy/q14.h
 )
