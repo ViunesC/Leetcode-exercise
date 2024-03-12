@@ -18,17 +18,27 @@ std::string q14::longestCommonPrefix(std::vector<std::string>& strs) {
     std::sort(strs.begin(),strs.begin() + strs.size());
 
     std::string crr_longest;
-    int crr_count;
     std::string temp;
-    int tmp_count;
 
     for (auto it = strs.begin();it != strs.end();++it) {
+        if (it == strs.begin())
+            crr_longest = *it;
+        temp = *it;
+        for (int i=0;i<temp.length();++i) {
+            if (i == crr_longest.length())
+                break;
+            if (crr_longest[i] != temp[i]) {
+                crr_longest.erase(i);
+                break;
+            }
+        }
 
+        if (crr_longest.empty()) {
+            break;
+        }
     }
 
-
-
-    return "";
+    return crr_longest;
 }
 
 
