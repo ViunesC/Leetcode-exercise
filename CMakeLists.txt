@@ -8,4 +8,5 @@ add_executable(Leetcode main.cpp
         Easy/q13.h
         Easy/q14.h
         Medium/q3.h
+        Hard/q4.h
 )
